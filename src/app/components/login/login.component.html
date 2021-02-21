@@ -1,0 +1,24 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="assets/img/Zapotlan.jpg" id="icon" alt="Zapotlan" style="width: 100px; height: 100px;" />
+      </div>
+  
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="correo" class="fadeIn second" name="correo" placeholder="Mail">
+        <input type="password" id="contrasena" class="fadeIn third" name="contrasena" placeholder="Contraseña">
+       <!--  <input type="submit" class="fadeIn fourth" value="Login">-->
+       <br>
+        <button mat-raised-button color="primary" [routerLink]="['/menu']">Login</button>
+        <br>
+      </form>
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+    </div>
+  </div>

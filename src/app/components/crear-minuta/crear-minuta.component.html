@@ -1,0 +1,126 @@
+<div class="container-fluid">
+
+    <!-- BODY PAGE -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">MINUTA</h1>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NUC">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Presentación">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Delito">
+            </div>
+        </div>
+        <!-- DATE DE INGRESO -->
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Fecha Ingreso</title>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+            <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        </head>
+
+        <body>
+            <input id="datepicker" width="150" placeholder="Ingreso" />
+
+            <script>
+                $('#datepicker').datepicker({
+                    showOtherMonths: true
+                });
+            </script>
+        </body>
+        <!-- DATE DE INICIO -->
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Fecha Inicio</title>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+            <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        </head>
+
+        <body>
+            <input id="datepicker" width="150" placeholder="Inicio" />
+
+            <script>
+                $('#datepicker').datepicker({
+                    showOtherMonths: true
+                });
+            </script>
+        </body>
+
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion">
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputState">Judicializada</label>
+            <select id="inputState" class="form-control">
+                <option selected>Si</option>
+                <option selected>No</option>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputState">Nueva</label>
+            <select id="inputState" class="form-control">
+                <option selected>Si</option>
+                <option selected>No</option>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputState">Archivo Muerto</label>
+            <select id="inputState" class="form-control">
+                <option selected>Si</option>
+                <option selected>No</option>
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputState">Vinculación</label>
+            <select id="inputState" class="form-control">
+                <option selected>Si</option>
+                <option selected>No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Oficio">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Rol">
+            </div>
+        </div>
+        <div class="d-grid gap-2 col-1 mx-auto">
+            <button class="btn btn-primary" type="button">Guardar</button>
+        </div>
+    </form>
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Consejo de la Judicatura del Estado de Jalisco</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->

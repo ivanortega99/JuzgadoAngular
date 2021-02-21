@@ -1,0 +1,54 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Juzgado Zapotlan</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button>
+        <img src="assets/img/Zapotlan.jpg" id="icon" alt="Zapotlan" style="width: 50px; height: 50px;" />
+    </button>
+</mat-toolbar>
+
+<mat-drawer-container class="pantalla" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-accordion *ngFor="let item of Menu">
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon>{{item.icon}}</mat-icon>
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{item.name}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <div *ngFor="let opc of item.SubMenu">
+                    <button mat-button class="buttonMenu" (click)="cambiarActivo(opc.link)">{{opc.opc}}</button>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-drawer>
+    <div>
+        <div *ngIf="opcionActiva == '/crear-carpeta'">
+            <app-crear-carpeta></app-crear-carpeta>
+        </div>
+
+        <div *ngIf="opcionActiva == '/crear-minuta'">
+            <app-crear-minuta></app-crear-minuta>
+        </div>
+
+        <div *ngIf="opcionActiva == '/crear-notificacion'">
+            <app-crear-notificacion></app-crear-notificacion>
+        </div>
+        <div *ngIf="opcionActiva == '/generar-notificacion'">
+            <app-generadas-notificacion></app-generadas-notificacion>
+        </div>
+        <div *ngIf="opcionActiva == '/registrar-usuario'">
+            <app-registrar-usuario></app-registrar-usuario>
+        </div>
+        <div *ngIf="opcionActiva == '/registrados-usuario'">
+            <app-registrados-usuario></app-registrados-usuario>
+        </div>
+    </div>
+
+</mat-drawer-container>
