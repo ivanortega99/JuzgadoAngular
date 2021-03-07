@@ -13,7 +13,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
     imports: [
@@ -30,7 +33,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
         MatTooltipModule,
         ScrollingModule,
         MatMenuModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        MatInputModule
     ],
     exports: [
         MatToolbarModule,
@@ -45,7 +52,11 @@ import {MatExpansionModule} from '@angular/material/expansion';
         MatTooltipModule,
         ScrollingModule,
         MatMenuModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatDatepickerModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
+        MatInputModule
     ],
 })
 export class MaterialModule { }
