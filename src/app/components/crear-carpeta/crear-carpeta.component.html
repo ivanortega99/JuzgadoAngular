@@ -1,94 +1,96 @@
-<!-- BODY PAGE -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">NUEVA CARPETA</h1>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">NUEVA CARPETA</h6>
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NUC">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Presentación">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Delito">
+                </div>
+            </div>
+
+            <body>
+                <div class="container">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Ingreso</mat-label>
+                        <input matInput [matDatepicker]="pickerIngreso">
+                        <mat-datepicker-toggle matSuffix [for]="pickerIngreso"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerIngreso></mat-datepicker>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Inicio</mat-label>
+                        <input matInput [matDatepicker]="pickerInicio">
+                        <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerInicio></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </body>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion">
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Judicializada</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Si</option>
+                    <option selected>No</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Nueva</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Si</option>
+                    <option selected>No</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Archivo Muerto</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Si</option>
+                    <option selected>No</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Vinculación</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Si</option>
+                    <option selected>No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Oficio">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Rol">
+                </div>
+            </div>
+            <div class="d-grid gap-2 col-1 mx-auto">
+                <button class="btn btn-primary" type="button">Guardar</button>
+            </div>
+        </form>
+    </div>
 </div>
-
-<form>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NUC">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Tipo">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Presentación">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Delito">
-        </div>
-    </div>
-    <body>
-        <div class="container">
-            <mat-form-field appearance="fill">
-                <mat-label>Ingreso</mat-label>
-                <input matInput [matDatepicker]="pickerIngreso">
-                <mat-datepicker-toggle matSuffix [for]="pickerIngreso"></mat-datepicker-toggle>
-                <mat-datepicker #pickerIngreso></mat-datepicker>
-            </mat-form-field>
-            <br>
-            <mat-form-field appearance="fill">
-                <mat-label>Inicio</mat-label>
-                <input matInput [matDatepicker]="pickerInicio">
-                <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
-                <mat-datepicker #pickerInicio></mat-datepicker>
-              </mat-form-field>
-        </div>
-    </body>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion">
-        </div>
-    </div>
-    <div class="form-group col-md-3">
-        <label for="inputState">Judicializada</label>
-        <select id="inputState" class="form-control">
-            <option selected>Si</option>
-            <option selected>No</option>
-        </select>
-    </div>
-    <div class="form-group col-md-3">
-        <label for="inputState">Nueva</label>
-        <select id="inputState" class="form-control">
-            <option selected>Si</option>
-            <option selected>No</option>
-        </select>
-    </div>
-    <div class="form-group col-md-3">
-        <label for="inputState">Archivo Muerto</label>
-        <select id="inputState" class="form-control">
-            <option selected>Si</option>
-            <option selected>No</option>
-        </select>
-    </div>
-    <div class="form-group col-md-3">
-        <label for="inputState">Vinculación</label>
-        <select id="inputState" class="form-control">
-            <option selected>Si</option>
-            <option selected>No</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Oficio">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Rol">
-        </div>
-    </div>
-    <div class="d-grid gap-2 col-1 mx-auto">
-        <button class="btn btn-primary" type="button">Guardar</button>
-    </div>
-</form>
-
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">

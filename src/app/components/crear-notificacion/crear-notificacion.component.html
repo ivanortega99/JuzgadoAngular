@@ -1,85 +1,94 @@
-<div class="container-fluid">
-
-    <!-- BODY PAGE -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Enviar Notificación</h1>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Enviar Notificación</h6>
     </div>
-    <!-- FORMULARIO -->
-    <form>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">NUC</label>
-            <div class="col-sm-5">
-                <input class="form-control" type="text">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Notificador</label>
-            <div class="col-sm-5">
-                <input class="form-control" type="text">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Acuerdo Realizado por:</label>
-            <div class="col-sm-5">
-                <input class="form-control" type="text">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Juez</label>
-            <div class="col-sm-5">
-                <input class="form-control" type="text">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Descripcion</label>
-            <div class="col-sm-5">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-        </div>
-
-        <div class="mb-3">
+    <div class="card-body">
+        <!-- FORMULARIO -->
+        <form>
             <div class="form-group row">
-                <label for="formFile" class=" col-sm-2 col-form-label">Adjuntar archivo</label>
+                <label class="col-sm-2 col-form-label">NUC</label>
                 <div class="col-sm-5">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="text">
                 </div>
             </div>
-        </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Notificador</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Acuerdo Realizado por:</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Juez</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text">
+                </div>
+            </div>
 
-    </form>
-    <!-- DATE OF IN AND START -->
+            <div class="row">
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha</mat-label>
+                        <input matInput [matDatepicker]="pickerfecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerfecha"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerfecha></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-7">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hora</mat-label>
+                        <input matInput placeholder="Hora" [ngxTimepicker]="fullTime" [format]="12" readonly>
+                        <mat-icon matSuffix>schedulesharpicon</mat-icon>
+                        <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Descripcion</label>
+                <div class="col-sm-5">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
 
-    <!-- CLOCK -->
+            <div class="mb-3">
+                <div class="form-group row">
+                    <label for="formFile" class=" col-sm-2 col-form-label">Adjuntar archivo</label>
+                    <div class="col-sm-5">
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                </div>
+            </div>
 
-    <!-- BOTTON GUARDAR-->
+        </form>
 
-    <div class="d-grid gap-2 col-1 mx-auto">
-        <div class="col-sm-5">
-            <button class="btn btn-primary" type="submit">Guardar</button>
-        </div>
-    </div>
-
-
-    <!-- BOTTON  ENVIAR -->
-
-    <div class="d-grid gap-2 col-1 mx-auto">
-        <div class="col-sm-5">
-            <button class="btn btn-primary" type="submit">Enviar</button>
-        </div>
-    </div>
-
-
-
-
-    <!-- Footer -->
-    <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright &copy; Consejo de la Judicatura del Estado de Jalisco</span>
+        <div class="d-grid gap-2 col-1 mx-auto">
+            <div class="col-sm-5">
+                <button class="btn btn-primary" type="submit">Guardar</button>
             </div>
         </div>
-    </footer>
-    <!-- End of Footer -->
 
+        <br>
+        <!-- BOTTON  ENVIAR -->
+        <div class="d-grid gap-2 col-1 mx-auto">
+            <div class="col-sm-5">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Consejo de la Judicatura del Estado de Jalisco</span>
+        </div>
+    </div>
+</footer>
+<!-- End of Footer -->

@@ -13,6 +13,8 @@ import { CrearNotificacionComponent } from './components/crear-notificacion/crea
 import { GeneradasNotificacionComponent } from './components/generadas-notificacion/generadas-notificacion.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { RegistradosUsuarioComponent } from './components/registrados-usuario/registrados-usuario.component';
+import { VerCarpetaComponent } from './components/ver-carpeta/ver-carpeta.component';
+import { GuardarCarpetaComponent } from './components/guardar-carpeta/guardar-carpeta.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { RegistradosUsuarioComponent } from './components/registrados-usuario/re
     CrearNotificacionComponent,
     GeneradasNotificacionComponent,
     RegistrarUsuarioComponent,
-    RegistradosUsuarioComponent
+    RegistradosUsuarioComponent,
+    VerCarpetaComponent,
+    GuardarCarpetaComponent
   ],
   imports: [
     BrowserModule,

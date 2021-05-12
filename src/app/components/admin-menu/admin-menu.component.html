@@ -32,11 +32,15 @@
         <div *ngIf="opcionActiva == '/crear-carpeta'">
             <app-crear-carpeta></app-crear-carpeta>
         </div>
-
+        <div *ngIf="opcionActiva == '/ver-carpeta'">
+            <app-ver-carpeta></app-ver-carpeta>
+        </div>
+        <div *ngIf="opcionActiva == '/guardar-carpeta'">
+            <app-guardar-carpeta></app-guardar-carpeta>
+        </div>
         <div *ngIf="opcionActiva == '/crear-minuta'">
             <app-crear-minuta></app-crear-minuta>
         </div>
-
         <div *ngIf="opcionActiva == '/crear-notificacion'">
             <app-crear-notificacion></app-crear-notificacion>
         </div>

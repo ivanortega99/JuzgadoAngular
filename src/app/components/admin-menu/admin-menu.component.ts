@@ -13,8 +13,8 @@ export class AdminMenuComponent implements OnInit {
   Menu=[
     {name:"Carpeta",icon:"folder_open",SubMenu:[
       {opc:"Crear",link:"/crear-carpeta"},
-      {opc:"ver",link:"/crear-carpeta"},
-      {opc:"Guardar",link:"/crear-carpeta"},
+      {opc:"ver",link:"/ver-carpeta"},
+      {opc:"Guardar",link:"/guardar-carpeta"},
       {opc:"Minutas",link:"/crear-minuta"},
     ]},
     {name:"Notificaciones",icon:"message",SubMenu:[

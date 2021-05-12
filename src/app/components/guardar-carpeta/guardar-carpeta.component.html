@@ -1,0 +1,35 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">GUARDAR CARPETA</h6>
+    </div>
+    <div class="card-body">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                    <input #file required id="file" multiple type="file">
+                    <br>
+                    <br>
+                    <button mat-fab color="primary" aria-label="Agrega Carpeta" (click)="SubirPDF()">
+                        <mat-icon>save</mat-icon>
+                    </button>
+
+                </div>
+                <div class="col-sm">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Consejo de la Judicatura del Estado de Jalisco</span>
+        </div>
+    </div>
+</footer>
+<!-- End of Footer -->
