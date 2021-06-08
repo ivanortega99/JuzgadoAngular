@@ -15,7 +15,8 @@ import { RegistrarUsuarioComponent } from './components/registrar-usuario/regist
 import { RegistradosUsuarioComponent } from './components/registrados-usuario/registrados-usuario.component';
 import { VerCarpetaComponent } from './components/ver-carpeta/ver-carpeta.component';
 import { GuardarCarpetaComponent } from './components/guardar-carpeta/guardar-carpeta.component';
-
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { GuardarCarpetaComponent } from './components/guardar-carpeta/guardar-ca
     BrowserModule,
     RouterModule.forRoot(ROUTES,{useHash:true}),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
