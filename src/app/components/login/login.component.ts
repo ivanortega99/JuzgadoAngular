@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
     //const headers = {"content-type": "application/json"};
     
-    console.log('imprimir si el formulario es valido')
+    /*console.log('imprimir si el formulario es valido')
       this.http.post<any>(this.url, JSON.stringify(this.usuario),{headers: {"content-type": "application/json"}}).subscribe ({
         next: data => {
             console.log("JALAAAAAAAAAAA")
@@ -46,6 +46,19 @@ export class LoginComponent implements OnInit {
             console.log(error.message);
             console.error('There was an error!', error);
         }
-    })
+    })*/
+
+    this.auth.login(this.usuario)
+      .subscribe( resp =>{
+        console.log(resp)
+        if(resp==200){
+          this.router.navigateByUrl('/menu');
+        }else{
+          alert("Contraseña Incorrecta")
+        }
+      },(err)=>{
+        console.log(err.error.error.message)
+      })
+
   }
 }

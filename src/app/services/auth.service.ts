@@ -10,11 +10,9 @@ export class AuthService {
 
   private url = "http://localhost:3000/api/login"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  login(usuario:usr_UserModel){
-    return this.http.post(
-      this.url,
-      JSON.stringify(usuario));
+  login(usuario: usr_UserModel) {
+    return this.http.post<any>(this.url, JSON.stringify(usuario),{headers: {"content-type": "application/json"}});
   }
 }
