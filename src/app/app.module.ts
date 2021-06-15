@@ -17,6 +17,7 @@ import { VerCarpetaComponent } from './components/ver-carpeta/ver-carpeta.compon
 import { GuardarCarpetaComponent } from './components/guardar-carpeta/guardar-carpeta.component';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { PartesComponent } from './components/partes/partes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from "@angular/common/http";
     RegistrarUsuarioComponent,
     RegistradosUsuarioComponent,
     VerCarpetaComponent,
-    GuardarCarpetaComponent
+    GuardarCarpetaComponent,
+    PartesComponent
   ],
   imports: [
     BrowserModule,
