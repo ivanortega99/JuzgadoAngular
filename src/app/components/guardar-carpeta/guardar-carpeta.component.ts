@@ -13,7 +13,7 @@ export class GuardarCarpetaComponent implements OnInit {
   }
 
   SubirPDF(){
-    alert('Guardandoooo!!!!!!!!')
+    alert('¡GUARDADO!')
   }
 
 }

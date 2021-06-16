@@ -6,7 +6,7 @@
 
         <form>
             <div class="form-group">
-                <div class="col-sm-10">
+                <div class="col-sm-3">
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NUC">
                 </div>
             </div>
@@ -26,63 +26,116 @@
                 </div>
             </div>
 
-            <div class="container">
-                <mat-form-field appearance="fill">
-                    <mat-label>Ingreso</mat-label>
-                    <input matInput [matDatepicker]="pickerIngreso">
-                    <mat-datepicker-toggle matSuffix [for]="pickerIngreso"></mat-datepicker-toggle>
-                    <mat-datepicker #pickerIngreso></mat-datepicker>
-                </mat-form-field>
-                <br>
-                <mat-form-field appearance="fill">
-                    <mat-label>Inicio</mat-label>
-                    <input matInput [matDatepicker]="pickerInicio">
-                    <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
-                    <mat-datepicker #pickerInicio></mat-datepicker>
-                </mat-form-field>
+            <div class="row">
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Inicio</mat-label>
+                        <input matInput [matDatepicker]="pickerfecha">
+                        <mat-datepicker-toggle matSuffix [for]="pickerfecha"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerfecha></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hora Inicio</mat-label>
+                        <input matInput placeholder="Hora" [ngxTimepicker]="fullTime" [format]="12" readonly>
+                        <mat-icon matSuffix>schedulesharpicon</mat-icon>
+                        <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+                    </mat-form-field>
+                </div>
             </div>
 
             <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion">
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion Efectiva">
                 </div>
             </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Judicializada</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
+            <div class="form-group col-md-8">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imputado">
             </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Nueva</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Archivo Muerto</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Vinculación</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Oficio">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle">
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Numero">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Colonia">
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Rol">
+
+            <div class="form-group col-md-3">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Municipio Delito">
+
+            </div>
+            <div class="form-group col-md-8">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Victima">
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Calle">
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Numero">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Colonia">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="inputState">Ministerio Público</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Lourdes Montoya Pulido</option>
+                        <option selected>Anel Nayeli Vazquez Fajardo</option>
+                        <option selected>Maribel Díaz Martínez</option>
+                        <option selected></option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">Defensor</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Agustin Alonso López Cantero</option>
+                        <option selected>Rigoberto Guzman Ochoa</option>
+                        <option selected>Alexis</option>
+                        <option selected>Felipe Arias de la Torre</option>
+                        <option selected>Privado</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">Asesor Juridico</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Luis Bernabe Marquez</option>
+                        <option selected>Luis Angel Ramirez Mendoza</option>
+                        <option selected>Privado</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="inputState">Juez</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Iván Gómez Vega</option>
+                        <option selected>Enrique Espinoza Niño</option>
+                        <option selected>Lourdes Angélica Delgado Alvarez</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputState">Se llevo a cabo la audiencia</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Si</option>
+                        <option selected>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Resolutivos</label>
+                <div class="col-sm-5">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
             <div class="d-grid gap-2 col-1 mx-auto">
