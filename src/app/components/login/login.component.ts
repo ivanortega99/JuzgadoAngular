@@ -12,53 +12,81 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  private url = "http://localhost:3000/api/login"
+  private url = "http://localhost:3005/api/login"
   usuario:usr_UserModel;
 
-  constructor(private auth:AuthService,private http:HttpClient,private router:Router) { }
+  constructor(private auth: AuthService, private http:HttpClient,private router:Router) { }
 
   ngOnInit(): void {
     this.usuario=new usr_UserModel();
-    //this.usuario.usr_mail="ortega4414@gmail.com";
+	// console.log('user', this.usuario)
   }
 
-  onSubmit(form:NgForm){
+//   onSubmit(form:NgForm) {
+//     if(form.invalid){return;}
 
-    if(form.invalid){return;}
+//     console.log("Formulario Enviado")
+//     console.log(this.usuario)
+//     console.log(form)
+//   }
 
-    console.log("Formulario Enviado")
-    console.log(this.usuario)
-    console.log(form)
-  }
+login(form:NgForm) {
+	console.log('make login');
 
-  login(form:NgForm){
-    if(form.invalid){return;}
+	this.auth.login(this.usuario).subscribe(
+		res => {
+			alert(res.toString());
+			console.log(res);
+			this.router.navigateByUrl('/menu');
+		},
+		err => {
+			console.log(err)
+			alert(err.error.message)
+		}
+	)
+	// this.auth.login(this.usuario)
+    //   .subscribe(resp =>{
+    //     if(resp==200){
+    //       this.router.navigateByUrl('/menu');
+    //     }else{
+    //       alert("Contraseña Incorrecta")
+    //     }
+    //   },(err)=>{
+    //     console.log(err);
+    //   })
+}
 
-    //const headers = {"content-type": "application/json"};
+//   login(form:NgForm){
+//     if(form.invalid){return;}
+
+// 	console.log('make login')
+
+//     //const headers = {"content-type": "application/json"};
     
-    /*console.log('imprimir si el formulario es valido')
-      this.http.post<any>(this.url, JSON.stringify(this.usuario),{headers: {"content-type": "application/json"}}).subscribe ({
-        next: data => {
-            console.log("JALAAAAAAAAAAA")
-            this.router.navigateByUrl('/menu');
-        },
-        error: error => {
-            console.log(error.message);
-            console.error('There was an error!', error);
-        }
-    })*/
+//     /*console.log('imprimir si el formulario es valido')
+//       this.http.post<any>(this.url, JSON.stringify(this.usuario),{headers: {"content-type": "application/json"}}).subscribe ({
+//         next: data => {
+//             console.log("JALAAAAAAAAAAA")
+//             this.router.navigateByUrl('/menu');
+//         },
+//         error: error => {
+//             console.log(error.message);
+//             console.error('There was an error!', error);
+//         }
+//     })*/
 
-    this.auth.login(this.usuario)
-      .subscribe( resp =>{
-        console.log(resp)
-        if(resp==200){
-          this.router.navigateByUrl('/menu');
-        }else{
-          alert("Contraseña Incorrecta")
-        }
-      },(err)=>{
-        console.log(err.error.error.message)
-      })
+    // this.auth.login(this.usuario)
+    //   .subscribe( resp =>{
+    //     console.log(resp)
+    //     if(resp==200){
+    //       this.router.navigateByUrl('/menu');
+    //     }else{
+    //       alert("Contraseña Incorrecta")
+    //     }
+    //   },(err)=>{
+    //     console.log(err);
+	// 	// console.log(err.error.error.message)
+    //   })
 
-  }
+//   }
 }

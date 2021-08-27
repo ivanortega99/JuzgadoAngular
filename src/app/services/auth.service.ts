@@ -8,11 +8,11 @@ import { usr_UserModel } from '../models/usuario.model';
 })
 export class AuthService {
 
-  private url = "http://localhost:3000/api/login"
+  private url = "http://localhost:3005/api/login"
 
   constructor(private http: HttpClient) { }
 
   login(usuario: usr_UserModel) {
-    return this.http.post<any>(this.url, JSON.stringify(usuario),{headers: {"content-type": "application/json"}});
+    return this.http.post(this.url, usuario);
   }
 }
