@@ -10,6 +10,14 @@ export class CrearMinutaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
+  pickerIngreso() {
+
+  }
+
+  pickerInicio() {
+    
+  }
 }

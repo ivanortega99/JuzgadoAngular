@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "juzgadoZapotlan"
+  "defaultProject": "juzgadoZapotlan",
+  "cli": {
+    "analytics": "98d0d81b-8937-4399-8c3b-60aabc5b5817"
+  }
 }
