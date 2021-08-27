@@ -13,4 +13,11 @@ export class CrearMinutaComponent implements OnInit {
     
   }
 
+  pickerIngreso() {
+
+  }
+
+  pickerInicio() {
+    
+  }
 }
