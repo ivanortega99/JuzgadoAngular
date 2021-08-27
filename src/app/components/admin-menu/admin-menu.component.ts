@@ -24,7 +24,7 @@ export class AdminMenuComponent implements OnInit {
     {name:"Usuarios",icon:"account_circle",SubMenu:[
       {opc:"Registrar",link:"/registrar-usuario"},
       {opc:"Registrados",link:"/registrados-usuario"},
-      {opc:"Partes",link:"/crear-carpeta"}
+      {opc:"Partes",link:"/partes"}
     ]},
   ];
 

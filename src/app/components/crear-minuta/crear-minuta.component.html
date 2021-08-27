@@ -6,7 +6,7 @@
 
         <form>
             <div class="form-group">
-                <div class="col-sm-10">
+                <div class="col-sm-3">
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NUC">
                 </div>
             </div>
@@ -26,63 +26,172 @@
                 </div>
             </div>
 
-            <div class="container">
-                <mat-form-field appearance="fill">
-                    <mat-label>Ingreso</mat-label>
-                    <input matInput [matDatepicker]="pickerIngreso">
-                    <mat-datepicker-toggle matSuffix [for]="pickerIngreso"></mat-datepicker-toggle>
-                    <mat-datepicker #pickerIngreso></mat-datepicker>
-                </mat-form-field>
-                <br>
-                <mat-form-field appearance="fill">
-                    <mat-label>Inicio</mat-label>
-                    <input matInput [matDatepicker]="pickerInicio">
-                    <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
-                    <mat-datepicker #pickerInicio></mat-datepicker>
-                </mat-form-field>
+            <div class="row">
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Ingreso</mat-label>
+                        <input matInput [matDatepicker]="pickerIngreso">
+                        <mat-datepicker-toggle matSuffix [for]="pickerIngreso"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerfecha></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hora Inicio</mat-label>
+                        <input matInput placeholder="Hora" [ngxTimepicker]="fullTime" [format]="12" readonly>
+                        <mat-icon matSuffix>schedulesharpicon</mat-icon>
+                        <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Inicio</mat-label>
+                        <input matInput [matDatepicker]="pickerInicio">
+                        <mat-datepicker-toggle matSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+                        <mat-datepicker #pickerfecha></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-5">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Hora Final</mat-label>
+                        <input matInput placeholder="Hora" [ngxTimepicker]="fullTime" [format]="12" readonly>
+                        <mat-icon matSuffix>schedulesharpicon</mat-icon>
+                        <ngx-material-timepicker #fullTime></ngx-material-timepicker>
+                    </mat-form-field>
+                </div>
             </div>
 
             <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion">
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Duracion Efectiva">
                 </div>
             </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Judicializada</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Nueva</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Archivo Muerto</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group col-md-3">
-                <label for="inputState">Vinculación</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Si</option>
-                    <option selected>No</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Oficio">
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Imputado">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="A.Paterno">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="A.Materno">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2"
+                        placeholder="Municipio Imputado">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Edad">
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Rol">
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Victima">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="A.Paterno">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="A.Materno">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Municipio Victima">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Edad">
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Municipio Delito">
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Lourdes Montoya Pulido</option>
+                        <option selected>Anel Nayeli Vazquez Fajardo</option>
+                        <option selected>Maribel Díaz Martínez</option>
+                        <option selected>Ministerio Público</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Agustin Alonso López Cantero</option>
+                        <option selected>Rigoberto Guzman Ochoa</option>
+                        <option selected>Alexis</option>
+                        <option selected>Felipe Arias de la Torre</option>
+                        <option selected>Privado</option>
+                        <option selected>Defensor</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Luis Bernabe Marquez</option>
+                        <option selected>Luis Angel Ramirez Mendoza</option>
+                        <option selected>Privado</option>
+                        <option selected>Asesor Juridico</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Iván Gómez Vega</option>
+                        <option selected>Enrique Espinoza Niño</option>
+                        <option selected>Lourdes Angélica Delgado Alvarez</option>
+                        <option selected>Juez</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <select id="inputState" class="form-control">
+                        <option selected>Si</option>
+                        <option selected>No</option>
+                        <option selected>Desahogo de audiencia </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <select id="inputState" class="form-control">
+                        <option selected>1</option>
+                        <option selected>2</option>
+                        <option selected>ZOOM</option>
+                        <option selected>TELMEX</option>
+                        <option selected>Sala</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Ilda Guerrero Martinez</option>
+                        <option selected>Oscar Murguia Torres</option>
+                        <option selected>Encargado de Sala</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <select id="inputState" class="form-control">
+                        <option selected>Monserrat Columbia Luis Juan</option>
+                        <option selected>Viridiana Romero Barajas</option>
+                        <option selected>Daniel Uribe Zavalza</option>
+                        <option selected>Auxiliar de Sala</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Resolutivos</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <label class="col-sm-2 col-form-label">Observaciones</label>
+                <div class="col-sm-3">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
             <div class="d-grid gap-2 col-1 mx-auto">
