@@ -35,8 +35,9 @@ login(form:NgForm) {
 
 	this.auth.login(this.usuario).subscribe(
 		res => {
-			alert(res.toString());
-			console.log(res);
+      // let response = {...res}
+      let response = JSON.parse(JSON.stringify(res));
+			alert(response.message);
 			this.router.navigateByUrl('/menu');
 		},
 		err => {
