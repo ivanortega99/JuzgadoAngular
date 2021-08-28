@@ -21,6 +21,13 @@
                             
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr *ngFor="let usuarios of usr_Registrado">
+                            <td>{{usuarios.nombre_usuario}}</td>
+                            <td>{{usuarios.tipo_usuario}}</td>
+                            <td>{{usuarios.username}}</td>
+                        </tr>
+                    </tbody>
                     <tfoot>
                         <tr>
                             <th>Nombre</th>
@@ -30,11 +37,7 @@
                            
                         </tr>
                     </tfoot>
-                    <tbody>
-                        <tr *ngFor="let usuarios of usr_Registrado">
-                            <td>{{usuarios.nombre_usuario}}</td>
-                        </tr>
-                    </tbody>
+                    
                 </table>
             </div>
         </div>
