@@ -16,7 +16,8 @@ export class RegistradosUsuarioComponent implements OnInit {
   obtenerRegistrados(){
     this.authServices.obtenerRegistrados()
     .subscribe(registrado =>{
-      this.usr_Registrado = JSON.parse(JSON.stringify(registrado));
+      let registerObj = JSON.parse(JSON.stringify(registrado))
+      this.usr_Registrado = registerObj.payload;
       console.log(registrado)
     },
 		err => {
