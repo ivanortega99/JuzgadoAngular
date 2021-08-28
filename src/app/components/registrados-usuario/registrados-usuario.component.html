@@ -31,11 +31,8 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
+                        <tr *ngFor="let usuarios of usr_Registrado">
+                            <td>{{usuarios.nombre_usuario}}</td>
                         </tr>
                     </tbody>
                 </table>

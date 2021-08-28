@@ -8,11 +8,17 @@ import { usr_UserModel } from '../models/usuario.model';
 })
 export class AuthService {
 
-  private url = "http://localhost:3005/api/login"
+  private url = 'http://localhost:3005/api/login';
+  private urlUsuarios = 'http://localhost:3005/api/usuarios/';
 
   constructor(private http: HttpClient) { }
 
   login(usuario: usr_UserModel) {
     return this.http.post(this.url, usuario);
   }
+
+  obtenerRegistrados(){
+    return this.http.get(this.urlUsuarios);
+  }
+
 }
