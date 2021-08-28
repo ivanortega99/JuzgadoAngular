@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(usuario: usr_UserModel) {
-    return this.http.post(this.url, usuario);
+    return this.http.post<Object>(this.url, usuario);
   }
 
   obtenerRegistrados(){
