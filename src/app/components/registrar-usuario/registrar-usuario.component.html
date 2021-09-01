@@ -10,40 +10,42 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Crea una cuenta</h1>
                         </div>
-                        <form class="user">
+                        <form class="user" (ngSubmit)="newUser(LoginForm)" #LoginForm='ngForm' >
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                        placeholder="Nombre">
+                                    <input type="text" class="form-control form-control-user" name="exampleFirstName"
+                                        placeholder="Nombre" [(ngModel)]="usr_Registrado.nombre_usuario">
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                        placeholder="Apellido">
+                                    <input type="text" class="form-control form-control-user" name="exampleLastName"
+                                        placeholder="Apellido" [(ngModel)]="usr_Registrado.apellidos_usuario">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="exampleUserName"
-                                    placeholder="Nombre Usuario">
+                                <input type="text" class="form-control form-control-user" name="exampleUserName"
+                                    placeholder="Nombre Usuario" [(ngModel)]="usr_Registrado.username">
                             </div>
                             
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user"
-                                        id="exampleInputPassword" placeholder="Contraseña">
+                                        name="exampleInputPassword" placeholder="Contraseña">
                                 </div>
                                 <div class="col-sm-6">
                                     <input type="password" class="form-control form-control-user"
-                                        id="exampleRepeatPassword" placeholder="Repita contraseña">
+                                        name="exampleRepeatPassword" placeholder="Repita contraseña" [(ngModel)]="usr_Registrado.contrasena">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                    placeholder="Tipo">
+                                <input type="email" class="form-control form-control-user" name="exampleInputEmail"
+                                    placeholder="Email" [(ngModel)]="usr_Registrado.email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-user" name="tipo"
+                                    placeholder="Tipo" [(ngModel)]="usr_Registrado.id_tipo_usuario">
                             </div>
 
-                            <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                Registrar cuenta
-                            </a>
+                            <button mat-raised-button color="primary" type="submit">Registrar</button>
                             <hr>
                         </form>
                         <hr>
